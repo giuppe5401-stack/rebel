@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>REBEL — Landing Page</title>
+  <meta name="description" content="Landing page ad alte prestazioni: design audace, SEO e conversioni.">
+  <link rel="icon" href="assets/favicon.png" sizes="64x64" type="image/png">
+  <link rel="preload" href="assets/logo.jpg" as="image">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="header">
+  <div class="container row">
+    <a class="brand" href="#home">
+      <img src="assets/logo.jpg" alt="Logo Rebel">
+      <span>REBEL</span>
+    </a>
+    <nav class="nav">
+      <a href="#servizi">Servizi</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#prezzi">Prezzi</a>
+      <a href="#recensioni">Recensioni</a>
+      <a href="#contatti">Contatti</a>
+      <a href="#prenota">Prenota</a>
+    </nav>
+    <button class="btn secondary menu-btn" onclick="document.querySelector('.mobile').classList.toggle('open')">Menu</button>
+  </div>
+  <div class="mobile" style="display:none"></div>
+  <script>
+    const mobile = document.querySelector('.mobile');
+    mobile.innerHTML = `<div class='container' style='padding:10px 16px 16px;border-top:1px solid var(--border)'>
+      <div style='display:grid;gap:10px;color:#cbd5e1'>
+        <a href='#servizi' onclick='mobile.classList.remove("open")'>Servizi</a>
+        <a href='#portfolio' onclick='mobile.classList.remove("open")'>Portfolio</a>
+        <a href='#prezzi' onclick='mobile.classList.remove("open")'>Prezzi</a>
+        <a href='#recensioni' onclick='mobile.classList.remove("open")'>Recensioni</a>
+        <a href='#contatti' onclick='mobile.classList.remove("open")'>Contatti</a>
+        <a href='#prenota' onclick='mobile.classList.remove("open")'>Prenota</a>
+      </div>
+    </div>`;
+    const observer = new MutationObserver(()=>{ mobile.style.display = mobile.classList.contains('open') ? 'block':'none' });
+    observer.observe(mobile,{attributes:true});
+  </script>
+</header>
+
+<main id="home" class="hero">
+  <div class="container wrap">
+    <div>
+      <span class="badge">✨ Nuovo: pacchetto lancio 2025</span>
+      <h1>Sii <span class="gradient">ribelle</span>. Costruiamo la tua presenza che spacca.</h1>
+      <p class="sub">Landing page ad alte prestazioni, design audace e messaggi che convertono. REBEL è il tuo team per attirare clienti oggi.</p>
+      <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
+        <a href="#prenota" class="btn">Prenota una chiamata ➜</a>
+        <a href="#portfolio" class="btn secondary" style="border:1px solid var(--border);color:#fff">Guarda i lavori</a>
+      </div>
+      <div class="pills">
+        <span>🛡️ SEO‑ready</span><span>⚡ Velocità top</span><span>🚀 Conversion-first</span>
+      </div>
+    </div>
+    <div class="mock">
+      <div class="mock-inner">
+        <img src="assets/logo.jpg" alt="Logo Rebel grande" style="width:220px;height:220px;border-radius:999px;object-fit:cover;box-shadow:0 0 0 8px rgba(255,255,255,.06)">
+      </div>
+    </div>
+  </div>
+</main>
+
+<section class="kpis container">
+  <div class="card"><h3>+120%</h3><p>lead in 60 giorni</p></div>
+  <div class="card"><h3>&lt; 2s</h3><p>tempo di caricamento</p></div>
+  <div class="card"><h3>98%</h3><p>clienti soddisfatti</p></div>
+  <div class="card"><h3>24/7</h3><p>supporto su richiesta</p></div>
+</section>
+
+<section id="servizi" class="section container">
+  <h2>Servizi</h2>
+  <p class="muted">Pacchetti flessibili per farti partire subito. Pensati per PMI, professionisti e startup.</p>
+  <div class="grid-3" style="margin-top:18px">
+    <div class="card">
+      <h3>Landing Page Sprint</h3>
+      <p>Una pagina che vende, pronta in pochi giorni. Copy, design e set-up lead.</p>
+      <ul class="list">
+        <li><span class="tick">✅</span>Studio UX & copy</li>
+        <li><span class="tick">✅</span>Sezioni essenziali</li>
+        <li><span class="tick">✅</span>Modulo contatti/WhatsApp</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Rebel Growth</h3>
+      <p>Landing + A/B test, analytics avanzate, ottimizzazione continua.</p>
+      <ul class="list">
+        <li><span class="tick">✅</span>Tracciamenti completi</li>
+        <li><span class="tick">✅</span>Test varianti CTA</li>
+        <li><span class="tick">✅</span>Report mensili</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Brand & Launch</h3>
+      <p>Pacchetto completo: identità visiva, landing e materiali social.</p>
+      <ul class="list">
+        <li><span class="tick">✅</span>Logo & palette</li>
+        <li><span class="tick">✅</span>Template social</li>
+        <li><span class="tick">✅</span>Guida tono di voce</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio" class="section container portfolio" style="border-top:1px solid var(--border)">
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:16px">
+    <div>
+      <h2>Portfolio</h2>
+      <p class="muted">Alcuni progetti recenti. Sì, ci piace rompere gli schemi.</p>
+    </div>
+    <a href="#contatti" class="muted">Hai un progetto? Parliamone →</a>
+  </div>
+  <div class="grid-3">
+    <div class='item'><div class='thumb'></div><div class='meta'><strong>Progetto 1</strong><span class='small'>Categoria</span></div></div>
+    <div class='item'><div class='thumb'></div><div class='meta'><strong>Progetto 2</strong><span class='small'>Categoria</span></div></div>
+    <div class='item'><div class='thumb'></div><div class='meta'><strong>Progetto 3</strong><span class='small'>Categoria</span></div></div>
+    <div class='item'><div class='thumb'></div><div class='meta'><strong>Progetto 4</strong><span class='small'>Categoria</span></div></div>
+    <div class='item'><div class='thumb'></div><div class='meta'><strong>Progetto 5</strong><span class='small'>Categoria</span></div></div>
+    <div class='item'><div class='thumb'></div><div class='meta'><strong>Progetto 6</strong><span class='small'>Categoria</span></div></div>
+  </div>
+</section>
+
+<section id="prezzi" class="section container">
+  <h2>Prezzi trasparenti</h2>
+  <div class="grid-3" style="margin-top:18px">
+    <div class="card"><h3>Starter</h3><div class="price">€499<span class="small"> + IVA</span></div>
+      <ul class="list"><li>✅ Landing 1 pagina</li><li>✅ Setup tracking base</li><li>✅ Consegna rapida</li></ul>
+      <a href="#prenota" class="btn block" style="margin-top:12px">Inizia</a>
+    </div>
+    <div class="card" style="outline:2px solid rgba(232,121,249,.4)"><h3>Growth</h3><div class="price">€899<span class="small"> + IVA</span></div>
+      <ul class="list"><li>✅ A/B test iniziale</li><li>✅ Copy avanzato</li><li>✅ Analytics & report</li></ul>
+      <a href="#prenota" class="btn block" style="margin-top:12px">Sali di livello</a>
+    </div>
+    <div class="card"><h3>Ultimate</h3><div class="price">€1.499<span class="small"> + IVA</span></div>
+      <ul class="list"><li>✅ Brand pack completo</li><li>✅ 3 varianti landing</li><li>✅ Ottimizzazione 60gg</li></ul>
+      <a href="#prenota" class="btn block" style="margin-top:12px">Lancio totale</a>
+    </div>
+  </div>
+</section>
+
+<section id="recensioni" class="section container" style="border-top:1px solid var(--border)">
+  <h2>Cosa dicono di noi</h2>
+  <div class="grid-3" style="margin-top:18px">
+    <div class="card"><div class="stars">★★★★★</div><p class="quote">“Team pazzesco: in 3 settimane +80% richieste!”</p><div class="small">— Giulia R.</div></div>
+    <div class="card"><div class="stars">★★★★★</div><p class="quote">“Design coraggioso ma funzionale. Hanno capito subito il nostro tono.”</p><div class="small">— Studio Verdi</div></div>
+    <div class="card"><div class="stars">★★★★★</div><p class="quote">“Setup tecnico impeccabile: tracciamenti, pixel, tutto a posto.”</p><div class="small">— Franco D.</div></div>
+  </div>
+</section>
+
+<section id="prenota" class="section container">
+  <div class="row">
+    <div>
+      <h2>Prenota una chiamata</h2>
+      <p class="muted">Raccontaci il tuo progetto: in 20 minuti capiamo obiettivi, target e prossimi passi.</p>
+      <div style="margin-top:12px" class="grid-3">
+        <div class="card">📅 Disponibilità entro 48h</div>
+        <div class="card">🛡️ Nessun impegno d'acquisto</div>
+        <div class="card">⚡ Consigli pratici subito</div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Richiedi uno slot</h3>
+      <form class="form" onsubmit="event.preventDefault(); alert('Richiesta inviata!');">
+        <input class="input" placeholder="Nome e cognome" required>
+        <input class="input" type="email" placeholder="Email" required>
+        <input class="input" type="tel" placeholder="Telefono">
+        <textarea class="textarea" placeholder="Parlaci in breve del progetto"></textarea>
+        <button class="btn">Invia richiesta</button>
+        <p class="small">Premendo “Invia richiesta” accetti la nostra Privacy Policy.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section id="contatti" class="section container" style="border-top:1px solid var(--border)">
+  <div class="grid-3">
+    <div>
+      <h3>Parliamone</h3>
+      <p class="muted">Scrivici su WhatsApp o via email. Rispondiamo al volo.</p>
+      <div class="flex"><span>📧</span> <a href="mailto:hello@rebel.studio">hello@rebel.studio</a></div>
+      <div class="flex"><span>📞</span> <a href="tel:+393330000000">+39 333 000 0000</a></div>
+      <div class="flex"><span>📍</span> Genova, Italia</div>
+    </div>
+    <div>
+      <h3>Seguici</h3>
+      <div class="flex">
+        <a class="btn secondary" href="#" style="border:1px solid var(--border)">Instagram</a>
+        <a class="btn secondary" href="#" style="border:1px solid var(--border)">Facebook</a>
+        <a class="btn secondary" href="#" style="border:1px solid var(--border)">LinkedIn</a>
+      </div>
+    </div>
+    <div>
+      <h3>FAQ lampo</h3>
+      <ul class="list">
+        <li><strong>In quanto tempo consegnate?</strong><br>Bozza in 5–7 giorni lavorativi per il pacchetto Starter.</li>
+        <li><strong>Come gestite i contenuti?</strong><br>Supporto copy + checklist guidata.</li>
+        <li><strong>Fate gestione continua?</strong><br>Sì, con i pacchetti Growth e Ultimate.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container" style="display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap;align-items:center">
+    <div>© 2025 REBEL — Tutti i diritti riservati.</div>
+    <div class="flex"><a href="#">Privacy</a><a href="#">Termini</a><a href="#home">Torna su</a></div>
+  </div>
+</footer>
+</body>
+</html>
