@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Rebel – Boutique di Abbigliamento</title>
-  <meta name="description" content="Rebel: boutique di abbigliamento con collezioni selezionate e consigli di stile dalla proprietaria. Scopri i capi, segui i social, iscriviti alla newsletter.">
+  <meta name="description" content="Rebel: boutique di abbigliamento con collezioni selezionate e consigli di stile dalla proprietaria. Seguici su Instagram, TikTok e Facebook.">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -25,6 +25,27 @@
     </div>
   </header>
 
+  <!-- Follow bar (invito visibile) -->
+  <div class="follow-bar">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
+      <strong>Seguici per outfit e nuove uscite:</strong>
+      <div class="social-buttons">
+        <a href="https://instagram.com/" target="_blank" rel="noopener" class="social-btn instagram" aria-label="Apri Instagram Rebel">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5a5.5 5.5 0 1 1 0 11a5.5 5.5 0 0 1 0-11zm0 2a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7zM18 6.5a1 1 0 1 1 0 2a1 1 0 0 1 0-2z"/></svg>
+          Instagram
+        </a>
+        <a href="https://tiktok.com/" target="_blank" rel="noopener" class="social-btn tiktok" aria-label="Apri TikTok Rebel">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 3a7.5 7.5 0 0 0 6 3V9a9.5 9.5 0 0 1-5-1.4V14a6 6 0 1 1-6-6c.34 0 .67.03 1 .08V10a3.5 3.5 0 1 0 2.5 3.35V3h1.5z"/></svg>
+          TikTok
+        </a>
+        <a href="https://facebook.com/" target="_blank" rel="noopener" class="social-btn facebook" aria-label="Apri Facebook Rebel">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 22v-9h3l1-4h-4V7.5c0-1.03.34-2 1.9-2H17V2.1C16.74 2.07 15.78 2 14.7 2C12.4 2 11 3.24 11 6v3H8v4h3v9h2z"/></svg>
+          Facebook
+        </a>
+      </div>
+    </div>
+  </div>
+
   <section id="home" class="hero">
     <div class="container content">
       <div>
@@ -32,7 +53,7 @@
         <p>Collezioni curate con passione dalla proprietaria di <strong>Rebel</strong>. Outfit, consigli e ispirazioni ogni settimana sui nostri canali social.</p>
         <div class="hero-actions">
           <a href="#collezione" class="cta">Scopri i capi</a>
-          <a href="#newsletter" class="cta ghost">-10% con la newsletter</a>
+          <a href="#social" class="cta ghost">Apri i nostri Social</a>
         </div>
         <div class="pillars">
           <div class="pill">Consulenza su misura</div>
@@ -59,7 +80,7 @@
           <div class="info"><strong>Abito Fluido</strong><span class="price">€69</span></div>
         </div>
         <div class="card">
-          <img src="https://images.unsplash.com/photo-1544441893-675973e31985?q=80&w=1200&auto=format&fit=crop" alt="Giacca">
+          <img src="https://images.unsplash.com/photo-1544441893-675973e31985?q=80&w=1200&auto=format&fit=crop" alt="Blazer">
           <div class="info"><strong>Blazer Rebel</strong><span class="price">€99</span></div>
         </div>
         <div class="card">
@@ -67,7 +88,7 @@
           <div class="info"><strong>Camicia Lino</strong><span class="price">€49</span></div>
         </div>
         <div class="card">
-          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop" alt="Pantaloni">
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop" alt="Pantalone">
           <div class="info"><strong>Pantalone Wide</strong><span class="price">€59</span></div>
         </div>
       </div>
@@ -81,17 +102,17 @@
         <p>Trova subito quello che cerchi.</p>
       </div>
       <div class="categories">
-        <a class="cat" href="#collezione">
+        <a class="cat" href="#collezione" aria-label="Apri categoria Donna">
           <img src="https://images.unsplash.com/photo-1514996937319-344454492b37?q=80&w=1200&auto=format&fit=crop" alt="Donna">
           <span class="overlay"></span>
           <span class="label">Donna</span>
         </a>
-        <a class="cat" href="#collezione">
+        <a class="cat" href="#collezione" aria-label="Apri categoria Uomo">
           <img src="https://images.unsplash.com/photo-1548883354-94bcfe321c2a?q=80&w=1200&auto=format&fit=crop" alt="Uomo">
           <span class="overlay"></span>
           <span class="label">Uomo</span>
         </a>
-        <a class="cat" href="#collezione">
+        <a class="cat" href="#collezione" aria-label="Apri categoria Accessori">
           <img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?q=80&w=1200&auto=format&fit=crop" alt="Accessori">
           <span class="overlay"></span>
           <span class="label">Accessori</span>
@@ -104,12 +125,36 @@
     <div class="container">
       <div class="section-title">
         <h2>Dai social al tuo armadio</h2>
-        <p>Segui <strong>@rebel.boutique</strong> per outfit, consigli e nuovi arrivi.</p>
+        <p>Clicca sui post o sui pulsanti per aprire i nostri profili.</p>
       </div>
+      <div class="social-buttons" style="justify-content:center; margin-bottom:16px">
+        <a href="https://instagram.com/" target="_blank" rel="noopener" class="social-btn instagram" aria-label="Apri Instagram Rebel">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5a5.5 5.5 0 1 1 0 11a5.5 5.5 0 0 1 0-11zm0 2a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7zM18 6.5a1 1 0 1 1 0 2a1 1 0 0 1 0-2z"/></svg>
+          Segui su Instagram
+        </a>
+        <a href="https://tiktok.com/" target="_blank" rel="noopener" class="social-btn tiktok" aria-label="Apri TikTok Rebel">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 3a7.5 7.5 0 0 0 6 3V9a9.5 9.5 0 0 1-5-1.4V14a6 6 0 1 1-6-6c.34 0 .67.03 1 .08V10a3.5 3.5 0 1 0 2.5 3.35V3h1.5z"/></svg>
+          Scopri su TikTok
+        </a>
+        <a href="https://facebook.com/" target="_blank" rel="noopener" class="social-btn facebook" aria-label="Apri Facebook Rebel">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 22v-9h3l1-4h-4V7.5c0-1.03.34-2 1.9-2H17V2.1C16.74 2.07 15.78 2 14.7 2C12.4 2 11 3.24 11 6v3H8v4h3v9h2z"/></svg>
+          Metti Mi piace
+        </a>
+      </div>
+
       <div class="feed">
-        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200&auto=format&fit=crop" alt="Post social 1">
-        <img src="https://images.unsplash.com/photo-1520975922323-0f5a1a6fdc0d?q=80&w=1200&auto=format&fit=crop" alt="Post social 2">
-        <img src="https://images.unsplash.com/photo-1520975693416-35f8f2c92c21?q=80&w=1200&auto=format&fit=crop" alt="Post social 3">
+        <a class="post" href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Apri post Instagram 1">
+          <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200&auto=format&fit=crop" alt="Post social 1">
+          <span class="tap">Apri su Instagram</span>
+        </a>
+        <a class="post" href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Apri post Instagram 2">
+          <img src="https://images.unsplash.com/photo-1520975922323-0f5a1a6fdc0d?q=80&w=1200&auto=format&fit=crop" alt="Post social 2">
+          <span class="tap">Guarda il Reel</span>
+        </a>
+        <a class="post" href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="Apri video TikTok">
+          <img src="https://images.unsplash.com/photo-1520975693416-35f8f2c92c21?q=80&w=1200&auto=format&fit=crop" alt="Post social 3">
+          <span class="tap">Apri su TikTok</span>
+        </a>
       </div>
     </div>
   </section>
@@ -136,7 +181,7 @@
           <p>Vieni a trovarci o scrivici su WhatsApp, ti rispondiamo velocemente.</p>
         </div>
         <p><strong>Rebel Boutique</strong><br>Via Piombino 10r – Genova</p>
-        <p>📱 <a href="https://wa.me/393000000000" target="_blank">WhatsApp</a> &nbsp;&nbsp; 📧 <a href="mailto:info@rebel.it">info@rebel.it</a></p>
+        <p>📱 <a href="https://wa.me/393000000000" target="_blank" rel="noopener">WhatsApp</a> &nbsp;&nbsp; 📧 <a href="mailto:info@rebel.it">info@rebel.it</a></p>
         <p class="small">Orari: Lun–Sab 10:00–19:30 • Dom chiuso</p>
       </div>
       <div class="map">
@@ -144,6 +189,19 @@
       </div>
     </div>
   </section>
+
+  <!-- Floating social dock -->
+  <div class="floating-social" aria-label="Dock social">
+    <a class="float-btn" href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Apri Instagram Rebel">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5.5a5.5 5.5 0 1 0 0 11a5.5 5.5 0 0 0 0-11zM18 6.5a1 1 0 1 1 0 2a1 1 0 0 1 0-2z"/></svg>
+    </a>
+    <a class="float-btn" href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="Apri TikTok Rebel">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 3a7.5 7.5 0 0 0 6 3V9a9.5 9.5 0 0 1-5-1.4V14a6 6 0 1 1-6-6c.34 0 .67.03 1 .08V10a3.5 3.5 0 1 0 2.5 3.35V3h1.5z"/></svg>
+    </a>
+    <a class="float-btn" href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Apri Facebook Rebel">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 22v-9h3l1-4h-4V7.5c0-1.03.34-2 1.9-2H17V2.1C16.74 2.07 15.78 2 14.7 2C12.4 2 11 3.24 11 6v3H8v4h3v9h2z"/></svg>
+    </a>
+  </div>
 
   <footer>
     <div class="container grid">
@@ -160,9 +218,9 @@
       </div>
       <div>
         <h4>Social</h4>
-        <a href="#" target="_blank">Instagram</a><br>
-        <a href="#" target="_blank">TikTok</a><br>
-        <a href="#" target="_blank">Facebook</a>
+        <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a><br>
+        <a href="https://tiktok.com/" target="_blank" rel="noopener">TikTok</a><br>
+        <a href="https://facebook.com/" target="_blank" rel="noopener">Facebook</a>
       </div>
       <div>
         <h4>Info legali</h4>
