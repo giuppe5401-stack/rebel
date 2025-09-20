@@ -2,143 +2,175 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Negozio di Abbigliamento</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      color: #222;
-      background: #fff;
-    }
-    header {
-      background: #111;
-      color: #fff;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-    }
-    header h1 { margin: 0; font-size: 1.5rem; }
-    header nav a {
-      color: #fff;
-      margin-left: 1rem;
-      text-decoration: none;
-    }
-    .hero {
-      background: url('https://source.unsplash.com/1600x900/?fashion,clothes') center/cover no-repeat;
-      color: white;
-      text-align: center;
-      padding: 8rem 2rem;
-    }
-    .hero h2 { font-size: 2.5rem; margin: 0 0 1rem; }
-    .hero p { font-size: 1.2rem; margin-bottom: 2rem; }
-    .btn {
-      background: #e91e63;
-      color: white;
-      padding: 0.8rem 1.5rem;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section { padding: 4rem 2rem; max-width: 1000px; margin: auto; }
-    .owner { display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; }
-    .owner img { border-radius: 10px; max-width: 300px; width: 100%; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
-    .card { border: 1px solid #ddd; border-radius: 10px; padding: 1rem; text-align: center; }
-    .card img { width: 100%; border-radius: 8px; }
-    .newsletter {
-      background: #f9f9f9;
-      text-align: center;
-      padding: 3rem 2rem;
-      border-radius: 10px;
-    }
-    .newsletter input {
-      padding: 0.8rem;
-      width: 250px;
-      max-width: 80%;
-      margin: 0.5rem;
-    }
-    footer {
-      background: #111;
-      color: #fff;
-      text-align: center;
-      padding: 2rem;
-    }
-    footer a { color: #e91e63; margin: 0 0.5rem; text-decoration: none; }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rebel – Boutique di Abbigliamento</title>
+  <meta name="description" content="Rebel: boutique di abbigliamento con collezioni selezionate e consigli di stile dalla proprietaria. Scopri i capi, segui i social, iscriviti alla newsletter.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <h1>Ribelle Moda</h1>
-    <nav>
-      <a href="#collezione">Collezione</a>
-      <a href="#social">Social</a>
-      <a href="#contatti">Contatti</a>
-    </nav>
+    <div class="container nav">
+      <a class="brand" href="#home">
+        <img src="assets/logo.jpg" alt="Rebel logo">
+        <span>REBEL</span>
+      </a>
+      <nav>
+        <a href="#collezione">Collezione</a>
+        <a href="#categorie">Categorie</a>
+        <a href="#social">Social</a>
+        <a href="#contatti" class="cta">Contattaci</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="hero">
-    <h2>Esprimi il tuo stile ogni giorno</h2>
-    <p>Collezioni selezionate e consigli di stile dalla tua fashion creator di fiducia.</p>
-    <a href="#collezione" class="btn">Scopri i capi</a>
-  </section>
-
-  <section class="owner">
-    <img src="https://source.unsplash.com/400x400/?woman,portrait" alt="Proprietaria">
-    <div>
-      <h2>Ciao, sono Laura</h2>
-      <p>Condivido ogni giorno outfit e ispirazioni di moda sui social. Nel mio negozio troverai capi scelti con cura e idee per esprimere al meglio la tua personalità.</p>
-      <a href="https://instagram.com/" target="_blank" class="btn">Seguimi su Instagram</a>
+  <section id="home" class="hero">
+    <div class="container content">
+      <div>
+        <h1>Moda che racconta chi sei</h1>
+        <p>Collezioni curate con passione dalla proprietaria di <strong>Rebel</strong>. Outfit, consigli e ispirazioni ogni settimana sui nostri canali social.</p>
+        <div class="hero-actions">
+          <a href="#collezione" class="cta">Scopri i capi</a>
+          <a href="#newsletter" class="cta ghost">-10% con la newsletter</a>
+        </div>
+        <div class="pillars">
+          <div class="pill">Consulenza su misura</div>
+          <div class="pill">Qualità che dura</div>
+          <div class="pill">Prezzi onesti</div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <img src="https://images.unsplash.com/photo-1520975922323-0f5a1a6fdc0d?q=80&w=1200&auto=format&fit=crop" alt="Look Rebel">
+        <p class="small">Nuova collezione • Primavera / Estate</p>
+      </div>
     </div>
   </section>
 
   <section id="collezione">
-    <h2>Collezione in Evidenza</h2>
-    <div class="grid">
-      <div class="card"><img src="https://source.unsplash.com/400x400/?dress" alt="Abito"><p>Abito Estivo<br>€49</p></div>
-      <div class="card"><img src="https://source.unsplash.com/400x400/?jacket" alt="Giacca"><p>Giacca Trend<br>€89</p></div>
-      <div class="card"><img src="https://source.unsplash.com/400x400/?shoes" alt="Scarpe"><p>Sneakers Bianche<br>€59</p></div>
-      <div class="card"><img src="https://source.unsplash.com/400x400/?shirt" alt="Camicia"><p>Camicia Classica<br>€39</p></div>
+    <div class="container">
+      <div class="section-title">
+        <h2>Collezione in evidenza</h2>
+        <p>Una selezione dei capi più amati dalle nostre clienti.</p>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?q=80&w=1200&auto=format&fit=crop" alt="Abito">
+          <div class="info"><strong>Abito Fluido</strong><span class="price">€69</span></div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1544441893-675973e31985?q=80&w=1200&auto=format&fit=crop" alt="Giacca">
+          <div class="info"><strong>Blazer Rebel</strong><span class="price">€99</span></div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop" alt="Camicia">
+          <div class="info"><strong>Camicia Lino</strong><span class="price">€49</span></div>
+        </div>
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop" alt="Pantaloni">
+          <div class="info"><strong>Pantalone Wide</strong><span class="price">€59</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="categorie">
+    <div class="container">
+      <div class="section-title">
+        <h2>Categorie</h2>
+        <p>Trova subito quello che cerchi.</p>
+      </div>
+      <div class="categories">
+        <a class="cat" href="#collezione">
+          <img src="https://images.unsplash.com/photo-1514996937319-344454492b37?q=80&w=1200&auto=format&fit=crop" alt="Donna">
+          <span class="overlay"></span>
+          <span class="label">Donna</span>
+        </a>
+        <a class="cat" href="#collezione">
+          <img src="https://images.unsplash.com/photo-1548883354-94bcfe321c2a?q=80&w=1200&auto=format&fit=crop" alt="Uomo">
+          <span class="overlay"></span>
+          <span class="label">Uomo</span>
+        </a>
+        <a class="cat" href="#collezione">
+          <img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?q=80&w=1200&auto=format&fit=crop" alt="Accessori">
+          <span class="overlay"></span>
+          <span class="label">Accessori</span>
+        </a>
+      </div>
     </div>
   </section>
 
   <section id="social">
-    <h2>Dai Social al Tuo Armadio</h2>
-    <p>Segui i miei contenuti e lasciati ispirare da look, consigli e nuove collezioni.</p>
-    <div class="grid">
-      <img src="https://source.unsplash.com/300x300/?fashion,style" alt="Post">
-      <img src="https://source.unsplash.com/301x301/?clothes,outfit" alt="Post">
-      <img src="https://source.unsplash.com/302x302/?fashion,girl" alt="Post">
+    <div class="container">
+      <div class="section-title">
+        <h2>Dai social al tuo armadio</h2>
+        <p>Segui <strong>@rebel.boutique</strong> per outfit, consigli e nuovi arrivi.</p>
+      </div>
+      <div class="feed">
+        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1200&auto=format&fit=crop" alt="Post social 1">
+        <img src="https://images.unsplash.com/photo-1520975922323-0f5a1a6fdc0d?q=80&w=1200&auto=format&fit=crop" alt="Post social 2">
+        <img src="https://images.unsplash.com/photo-1520975693416-35f8f2c92c21?q=80&w=1200&auto=format&fit=crop" alt="Post social 3">
+      </div>
     </div>
   </section>
 
-  <section class="newsletter">
-    <h2>Iscriviti alla Newsletter</h2>
-    <p>Ricevi novità, promo e un -10% sul tuo primo acquisto!</p>
-    <form>
-      <input type="text" placeholder="Il tuo nome" required>
-      <input type="email" placeholder="La tua email" required>
-      <button class="btn">Iscriviti</button>
-    </form>
+  <section id="newsletter">
+    <div class="container">
+      <div class="newsletter">
+        <h2>Iscriviti alla newsletter</h2>
+        <p>Novità, promo e ispirazioni ogni mese. Ricevi subito il <strong>-10%</strong> sul primo acquisto.</p>
+        <form onsubmit="event.preventDefault(); alert('Grazie! Ti contatteremo presto.');">
+          <input type="text" placeholder="Il tuo nome" required>
+          <input type="email" placeholder="La tua email" required>
+          <button class="cta btn">Iscriviti</button>
+        </form>
+      </div>
+    </div>
   </section>
 
   <section id="contatti">
-    <h2>Contatti</h2>
-    <p>📍 Via della Moda 10, Milano</p>
-    <p>📱 <a href="https://wa.me/391234567890" target="_blank">Scrivimi su WhatsApp</a></p>
-    <p>📧 info@ribellemoda.it</p>
+    <div class="container contact">
+      <div>
+        <div class="section-title" style="text-align:left">
+          <h2>Contatti</h2>
+          <p>Vieni a trovarci o scrivici su WhatsApp, ti rispondiamo velocemente.</p>
+        </div>
+        <p><strong>Rebel Boutique</strong><br>Via Piombino 10r – Genova</p>
+        <p>📱 <a href="https://wa.me/393000000000" target="_blank">WhatsApp</a> &nbsp;&nbsp; 📧 <a href="mailto:info@rebel.it">info@rebel.it</a></p>
+        <p class="small">Orari: Lun–Sab 10:00–19:30 • Dom chiuso</p>
+      </div>
+      <div class="map">
+        <iframe title="Mappa" src="https://www.openstreetmap.org/export/embed.html?bbox=8.9%2C44.38%2C9.0%2C44.45&layer=mapnik" style="border:0;width:100%;height:280px"></iframe>
+      </div>
+    </div>
   </section>
 
   <footer>
-    <p>© 2025 Ribelle Moda - Tutti i diritti riservati</p>
-    <p>
-      <a href="#">Instagram</a> |
-      <a href="#">TikTok</a> |
-      <a href="#">Facebook</a>
-    </p>
+    <div class="container grid">
+      <div>
+        <a class="brand" href="#home" style="color:#fff"><img src="assets/logo.jpg" alt="Rebel logo"><span>REBEL</span></a>
+        <p class="small">Boutique di abbigliamento a Genova. Collezioni selezionate e consigli di stile dalla proprietaria.</p>
+      </div>
+      <div>
+        <h4>Menu</h4>
+        <a href="#collezione">Collezione</a><br>
+        <a href="#categorie">Categorie</a><br>
+        <a href="#social">Social</a><br>
+        <a href="#contatti">Contatti</a>
+      </div>
+      <div>
+        <h4>Social</h4>
+        <a href="#" target="_blank">Instagram</a><br>
+        <a href="#" target="_blank">TikTok</a><br>
+        <a href="#" target="_blank">Facebook</a>
+      </div>
+      <div>
+        <h4>Info legali</h4>
+        <a href="#">Privacy</a><br>
+        <a href="#">Cookie</a><br>
+        <span class="small">© 2025 Rebel</span>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
