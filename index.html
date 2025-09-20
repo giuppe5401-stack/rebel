@@ -1,215 +1,144 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>REBEL — Landing Page</title>
-  <meta name="description" content="Landing page ad alte prestazioni: design audace, SEO e conversioni.">
-  <link rel="icon" href="assets/favicon.png" sizes="64x64" type="image/png">
-  <link rel="preload" href="assets/logo.jpg" as="image">
-  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Negozio di Abbigliamento</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      color: #222;
+      background: #fff;
+    }
+    header {
+      background: #111;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+    }
+    header h1 { margin: 0; font-size: 1.5rem; }
+    header nav a {
+      color: #fff;
+      margin-left: 1rem;
+      text-decoration: none;
+    }
+    .hero {
+      background: url('https://source.unsplash.com/1600x900/?fashion,clothes') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 8rem 2rem;
+    }
+    .hero h2 { font-size: 2.5rem; margin: 0 0 1rem; }
+    .hero p { font-size: 1.2rem; margin-bottom: 2rem; }
+    .btn {
+      background: #e91e63;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section { padding: 4rem 2rem; max-width: 1000px; margin: auto; }
+    .owner { display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; }
+    .owner img { border-radius: 10px; max-width: 300px; width: 100%; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+    .card { border: 1px solid #ddd; border-radius: 10px; padding: 1rem; text-align: center; }
+    .card img { width: 100%; border-radius: 8px; }
+    .newsletter {
+      background: #f9f9f9;
+      text-align: center;
+      padding: 3rem 2rem;
+      border-radius: 10px;
+    }
+    .newsletter input {
+      padding: 0.8rem;
+      width: 250px;
+      max-width: 80%;
+      margin: 0.5rem;
+    }
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+    }
+    footer a { color: #e91e63; margin: 0 0.5rem; text-decoration: none; }
+  </style>
 </head>
 <body>
-<header class="header">
-  <div class="container row">
-    <a class="brand" href="#home">
-      <img src="assets/logo.jpg" alt="Logo Rebel">
-      <span>REBEL</span>
-    </a>
-    <nav class="nav">
-      <a href="#servizi">Servizi</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#prezzi">Prezzi</a>
-      <a href="#recensioni">Recensioni</a>
+  <header>
+    <h1>Ribelle Moda</h1>
+    <nav>
+      <a href="#collezione">Collezione</a>
+      <a href="#social">Social</a>
       <a href="#contatti">Contatti</a>
-      <a href="#prenota">Prenota</a>
     </nav>
-    <button class="btn secondary menu-btn" onclick="document.querySelector('.mobile').classList.toggle('open')">Menu</button>
-  </div>
-  <div class="mobile" style="display:none"></div>
-  <script>
-    const mobile = document.querySelector('.mobile');
-    mobile.innerHTML = `<div class='container' style='padding:10px 16px 16px;border-top:1px solid var(--border)'>
-      <div style='display:grid;gap:10px;color:#cbd5e1'>
-        <a href='#servizi' onclick='mobile.classList.remove("open")'>Servizi</a>
-        <a href='#portfolio' onclick='mobile.classList.remove("open")'>Portfolio</a>
-        <a href='#prezzi' onclick='mobile.classList.remove("open")'>Prezzi</a>
-        <a href='#recensioni' onclick='mobile.classList.remove("open")'>Recensioni</a>
-        <a href='#contatti' onclick='mobile.classList.remove("open")'>Contatti</a>
-        <a href='#prenota' onclick='mobile.classList.remove("open")'>Prenota</a>
-      </div>
-    </div>`;
-    const observer = new MutationObserver(()=>{ mobile.style.display = mobile.classList.contains('open') ? 'block':'none' });
-    observer.observe(mobile,{attributes:true});
-  </script>
-</header>
+  </header>
 
-<main id="home" class="hero">
-  <div class="container wrap">
+  <section class="hero">
+    <h2>Esprimi il tuo stile ogni giorno</h2>
+    <p>Collezioni selezionate e consigli di stile dalla tua fashion creator di fiducia.</p>
+    <a href="#collezione" class="btn">Scopri i capi</a>
+  </section>
+
+  <section class="owner">
+    <img src="https://source.unsplash.com/400x400/?woman,portrait" alt="Proprietaria">
     <div>
-      <span class="badge">✨ Nuovo: pacchetto lancio 2025</span>
-      <h1>Sii <span class="gradient">ribelle</span>. Costruiamo la tua presenza che spacca.</h1>
-      <p class="sub">Landing page ad alte prestazioni, design audace e messaggi che convertono. REBEL è il tuo team per attirare clienti oggi.</p>
-      <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap">
-        <a href="#prenota" class="btn">Prenota una chiamata ➜</a>
-        <a href="#portfolio" class="btn secondary" style="border:1px solid var(--border);color:#fff">Guarda i lavori</a>
-      </div>
-      <div class="pills">
-        <span>🛡️ SEO‑ready</span><span>⚡ Velocità top</span><span>🚀 Conversion-first</span>
-      </div>
+      <h2>Ciao, sono Laura</h2>
+      <p>Condivido ogni giorno outfit e ispirazioni di moda sui social. Nel mio negozio troverai capi scelti con cura e idee per esprimere al meglio la tua personalità.</p>
+      <a href="https://instagram.com/" target="_blank" class="btn">Seguimi su Instagram</a>
     </div>
-    <div class="mock">
-      <div class="mock-inner">
-        <img src="assets/logo.jpg" alt="Logo Rebel grande" style="width:220px;height:220px;border-radius:999px;object-fit:cover;box-shadow:0 0 0 8px rgba(255,255,255,.06)">
-      </div>
-    </div>
-  </div>
-</main>
+  </section>
 
-<section class="kpis container">
-  <div class="card"><h3>+120%</h3><p>lead in 60 giorni</p></div>
-  <div class="card"><h3>&lt; 2s</h3><p>tempo di caricamento</p></div>
-  <div class="card"><h3>98%</h3><p>clienti soddisfatti</p></div>
-  <div class="card"><h3>24/7</h3><p>supporto su richiesta</p></div>
-</section>
+  <section id="collezione">
+    <h2>Collezione in Evidenza</h2>
+    <div class="grid">
+      <div class="card"><img src="https://source.unsplash.com/400x400/?dress" alt="Abito"><p>Abito Estivo<br>€49</p></div>
+      <div class="card"><img src="https://source.unsplash.com/400x400/?jacket" alt="Giacca"><p>Giacca Trend<br>€89</p></div>
+      <div class="card"><img src="https://source.unsplash.com/400x400/?shoes" alt="Scarpe"><p>Sneakers Bianche<br>€59</p></div>
+      <div class="card"><img src="https://source.unsplash.com/400x400/?shirt" alt="Camicia"><p>Camicia Classica<br>€39</p></div>
+    </div>
+  </section>
 
-<section id="servizi" class="section container">
-  <h2>Servizi</h2>
-  <p class="muted">Pacchetti flessibili per farti partire subito. Pensati per PMI, professionisti e startup.</p>
-  <div class="grid-3" style="margin-top:18px">
-    <div class="card">
-      <h3>Landing Page Sprint</h3>
-      <p>Una pagina che vende, pronta in pochi giorni. Copy, design e set-up lead.</p>
-      <ul class="list">
-        <li><span class="tick">✅</span>Studio UX & copy</li>
-        <li><span class="tick">✅</span>Sezioni essenziali</li>
-        <li><span class="tick">✅</span>Modulo contatti/WhatsApp</li>
-      </ul>
+  <section id="social">
+    <h2>Dai Social al Tuo Armadio</h2>
+    <p>Segui i miei contenuti e lasciati ispirare da look, consigli e nuove collezioni.</p>
+    <div class="grid">
+      <img src="https://source.unsplash.com/300x300/?fashion,style" alt="Post">
+      <img src="https://source.unsplash.com/301x301/?clothes,outfit" alt="Post">
+      <img src="https://source.unsplash.com/302x302/?fashion,girl" alt="Post">
     </div>
-    <div class="card">
-      <h3>Rebel Growth</h3>
-      <p>Landing + A/B test, analytics avanzate, ottimizzazione continua.</p>
-      <ul class="list">
-        <li><span class="tick">✅</span>Tracciamenti completi</li>
-        <li><span class="tick">✅</span>Test varianti CTA</li>
-        <li><span class="tick">✅</span>Report mensili</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Brand & Launch</h3>
-      <p>Pacchetto completo: identità visiva, landing e materiali social.</p>
-      <ul class="list">
-        <li><span class="tick">✅</span>Logo & palette</li>
-        <li><span class="tick">✅</span>Template social</li>
-        <li><span class="tick">✅</span>Guida tono di voce</li>
-      </ul>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="portfolio" class="section container portfolio" style="border-top:1px solid var(--border)">
-  <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:16px">
-    <div>
-      <h2>Portfolio</h2>
-      <p class="muted">Alcuni progetti recenti. Sì, ci piace rompere gli schemi.</p>
-    </div>
-    <a href="#contatti" class="muted">Hai un progetto? Parliamone →</a>
-  </div>
-  <div class="grid-3">
-    <div class='item'><div class='thumb'></div><div class='meta'><strong>Progetto 1</strong><span class='small'>Categoria</span></div></div>
-    <div class='item'><div class='thumb'></div><div class='meta'><strong>Progetto 2</strong><span class='small'>Categoria</span></div></div>
-    <div class='item'><div class='thumb'></div><div class='meta'><strong>Progetto 3</strong><span class='small'>Categoria</span></div></div>
-    <div class='item'><div class='thumb'></div><div class='meta'><strong>Progetto 4</strong><span class='small'>Categoria</span></div></div>
-    <div class='item'><div class='thumb'></div><div class='meta'><strong>Progetto 5</strong><span class='small'>Categoria</span></div></div>
-    <div class='item'><div class='thumb'></div><div class='meta'><strong>Progetto 6</strong><span class='small'>Categoria</span></div></div>
-  </div>
-</section>
+  <section class="newsletter">
+    <h2>Iscriviti alla Newsletter</h2>
+    <p>Ricevi novità, promo e un -10% sul tuo primo acquisto!</p>
+    <form>
+      <input type="text" placeholder="Il tuo nome" required>
+      <input type="email" placeholder="La tua email" required>
+      <button class="btn">Iscriviti</button>
+    </form>
+  </section>
 
-<section id="prezzi" class="section container">
-  <h2>Prezzi trasparenti</h2>
-  <div class="grid-3" style="margin-top:18px">
-    <div class="card"><h3>Starter</h3><div class="price">€499<span class="small"> + IVA</span></div>
-      <ul class="list"><li>✅ Landing 1 pagina</li><li>✅ Setup tracking base</li><li>✅ Consegna rapida</li></ul>
-      <a href="#prenota" class="btn block" style="margin-top:12px">Inizia</a>
-    </div>
-    <div class="card" style="outline:2px solid rgba(232,121,249,.4)"><h3>Growth</h3><div class="price">€899<span class="small"> + IVA</span></div>
-      <ul class="list"><li>✅ A/B test iniziale</li><li>✅ Copy avanzato</li><li>✅ Analytics & report</li></ul>
-      <a href="#prenota" class="btn block" style="margin-top:12px">Sali di livello</a>
-    </div>
-    <div class="card"><h3>Ultimate</h3><div class="price">€1.499<span class="small"> + IVA</span></div>
-      <ul class="list"><li>✅ Brand pack completo</li><li>✅ 3 varianti landing</li><li>✅ Ottimizzazione 60gg</li></ul>
-      <a href="#prenota" class="btn block" style="margin-top:12px">Lancio totale</a>
-    </div>
-  </div>
-</section>
+  <section id="contatti">
+    <h2>Contatti</h2>
+    <p>📍 Via della Moda 10, Milano</p>
+    <p>📱 <a href="https://wa.me/391234567890" target="_blank">Scrivimi su WhatsApp</a></p>
+    <p>📧 info@ribellemoda.it</p>
+  </section>
 
-<section id="recensioni" class="section container" style="border-top:1px solid var(--border)">
-  <h2>Cosa dicono di noi</h2>
-  <div class="grid-3" style="margin-top:18px">
-    <div class="card"><div class="stars">★★★★★</div><p class="quote">“Team pazzesco: in 3 settimane +80% richieste!”</p><div class="small">— Giulia R.</div></div>
-    <div class="card"><div class="stars">★★★★★</div><p class="quote">“Design coraggioso ma funzionale. Hanno capito subito il nostro tono.”</p><div class="small">— Studio Verdi</div></div>
-    <div class="card"><div class="stars">★★★★★</div><p class="quote">“Setup tecnico impeccabile: tracciamenti, pixel, tutto a posto.”</p><div class="small">— Franco D.</div></div>
-  </div>
-</section>
-
-<section id="prenota" class="section container">
-  <div class="row">
-    <div>
-      <h2>Prenota una chiamata</h2>
-      <p class="muted">Raccontaci il tuo progetto: in 20 minuti capiamo obiettivi, target e prossimi passi.</p>
-      <div style="margin-top:12px" class="grid-3">
-        <div class="card">📅 Disponibilità entro 48h</div>
-        <div class="card">🛡️ Nessun impegno d'acquisto</div>
-        <div class="card">⚡ Consigli pratici subito</div>
-      </div>
-    </div>
-    <div class="card">
-      <h3>Richiedi uno slot</h3>
-      <form class="form" onsubmit="event.preventDefault(); alert('Richiesta inviata!');">
-        <input class="input" placeholder="Nome e cognome" required>
-        <input class="input" type="email" placeholder="Email" required>
-        <input class="input" type="tel" placeholder="Telefono">
-        <textarea class="textarea" placeholder="Parlaci in breve del progetto"></textarea>
-        <button class="btn">Invia richiesta</button>
-        <p class="small">Premendo “Invia richiesta” accetti la nostra Privacy Policy.</p>
-      </form>
-    </div>
-  </div>
-</section>
-
-<section id="contatti" class="section container" style="border-top:1px solid var(--border)">
-  <div class="grid-3">
-    <div>
-      <h3>Parliamone</h3>
-      <p class="muted">Scrivici su WhatsApp o via email. Rispondiamo al volo.</p>
-      <div class="flex"><span>📧</span> <a href="mailto:hello@rebel.studio">hello@rebel.studio</a></div>
-      <div class="flex"><span>📞</span> <a href="tel:+393330000000">+39 333 000 0000</a></div>
-      <div class="flex"><span>📍</span> Genova, Italia</div>
-    </div>
-    <div>
-      <h3>Seguici</h3>
-      <div class="flex">
-        <a class="btn secondary" href="#" style="border:1px solid var(--border)">Instagram</a>
-        <a class="btn secondary" href="#" style="border:1px solid var(--border)">Facebook</a>
-        <a class="btn secondary" href="#" style="border:1px solid var(--border)">LinkedIn</a>
-      </div>
-    </div>
-    <div>
-      <h3>FAQ lampo</h3>
-      <ul class="list">
-        <li><strong>In quanto tempo consegnate?</strong><br>Bozza in 5–7 giorni lavorativi per il pacchetto Starter.</li>
-        <li><strong>Come gestite i contenuti?</strong><br>Supporto copy + checklist guidata.</li>
-        <li><strong>Fate gestione continua?</strong><br>Sì, con i pacchetti Growth e Ultimate.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="container" style="display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap;align-items:center">
-    <div>© 2025 REBEL — Tutti i diritti riservati.</div>
-    <div class="flex"><a href="#">Privacy</a><a href="#">Termini</a><a href="#home">Torna su</a></div>
-  </div>
-</footer>
+  <footer>
+    <p>© 2025 Ribelle Moda - Tutti i diritti riservati</p>
+    <p>
+      <a href="#">Instagram</a> |
+      <a href="#">TikTok</a> |
+      <a href="#">Facebook</a>
+    </p>
+  </footer>
 </body>
 </html>
